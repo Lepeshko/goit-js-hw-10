@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countdown Timer</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <!-- Імпорт стилів iziToast -->
+  </head>
+  <body>
+    <div>
+      <input type="text" id="datetime-picker" />
+      <button type="button" data-start class="button-start">Start</button>
+      <button type="button" data-stop class="button-start">Stop</button>
+    </div>
+
+    <div class="timer">
+      <div class="field">
+        <span class="value" data-days>00</span>
+        <span class="label">Days</span>
+      </div>
+      <div class="field">
+        <span class="value" data-hours>00</span>
+        <span class="label">Hours</span>
+      </div>
+      <div class="field">
+        <span class="value" data-minutes>00</span>
+        <span class="label">Minutes</span>
+      </div>
+      <div class="field">
+        <span class="value" data-seconds>00</span>
+        <span class="label">Seconds</span>
+      </div>
+    </div>
+
+    <a href="./index.html" class="go-back-button">Go back</a>
+    <script type="module" src="./js/1-timer.js"></script>
+  </body>
+</html>

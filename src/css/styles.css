@@ -1,25 +1,474 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-@import url('./reset.css');
-@import url('./vite-promo.css');
-@import url('./header.css');
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f5f5f5;
+  padding: 24px 156px;
+  width: calc(100% - 312px);
+  height: calc(100% - 48px);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
 
-:root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+/* Центрування контенту на головній сторінці */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px; /* Відстань між зображеннями */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: space-between; /* Розподіляє елементи рівномірно */
+}
+
+.gallery-item {
+  flex: 0 0 calc(33.333% - 24px); /* Відстань між зображеннями */
+  box-sizing: border-box;
+  border-radius: 10px; /* Скруглення куточків */
+  overflow: hidden; /* Приховує виходження зображення за межі рамки */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тінь */
+}
+
+.gallery-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* .gallery-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px; 
+} */
+
+.gallery-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Забезпечує покриття контейнера без спотворень */
+}
+
+/* Стилі для форми */
+.feedback-form {
+  width: 360px;
+  margin: 0 auto;
+  padding: 24px;
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+/* Стилі для міток над полями вводу */
+.feedback-form label {
+  display: block; /* Розміщує кожну мітку на окремому рядку */
+  margin-bottom: 5px; /* Відступ між мітками */
   font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
+  color: #2e2f42;
+}
 
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
+/* Стилі для полів вводу */
+.feedback-form input[type='email'],
+.feedback-form textarea {
+  width: 360px;
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 40px;
+  padding: 10px;
+  margin-top: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box; /* Забезпечує включення padding та border у загальну ширину елемента */
+}
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+.feedback-form input[type='email'],
+.feedback-form textarea {
+  font-size: 16px;
+  padding: 8px;
+}
+
+/* Висота для поля вводу тексту Email */
+.feedback-form input[type='email'] {
+  height: 40px;
+}
+
+/* Висота для поля вводу Message */
+.feedback-form textarea {
+  min-height: 80px;
+}
+
+/* Стилі для кнопки */
+.feedback-form button[type='submit'] {
+  width: 95px;
+  height: 40px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4e75ff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.feedback-form button[type='submit']:hover {
+  background-color: #6c8cff;
+}
+
+/* Стилі для кнопок */
+.form-gallery {
+  display: inline-block;
+  padding: 10px 30px;
+  background-color: #4e75ff;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+  width: 80px;
+  text-align: center;
+}
+
+.form-gallery:hover {
+  background-color: #6c8cff;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.go-back-button {
+  display: inline-block;
+  padding: 5px 8px;
+  background-color: #4e75ff;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 20px;
+  width: 80px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.go-back-button:hover {
+  background-color: #6c8cff;
+}
+
+/* Оверлей для темносірого фону */
+.sl-overlay {
+  background: rgba(0, 0, 0, 2) !important; /* Темносірий фон */
+}
+
+class=""
+
+/* Зміна кольору стрілок вліво і вправо */
+.sl-wrapper .sl-counter {
+  color: white !important; /* Білий колір */
+}
+
+.sl-wrapper .sl-counter {
+  z-index: 10070;
+  color: rgb(255, 255, 255) !important;
+}
+
+/* Зміна кольору хрестика, який закриває модальне вікно */
+.sl-close {
+  color: white !important; /* Білий колір */
+}
+
+/* Зміна кольору цифр, які показують рахунок картинок */
+.sl-next,
+.sl-prev {
+  color: white !important; /* Білий колір */
+}
+
+div {
+  /* margin-bottom: 20px; */
+}
+
+.timer {
+  display: flex;
+  gap: 10px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.value {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.label {
+  font-size: 1rem;
+}
+
+/* Загальні стилі для тіла
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+} */
+
+/* Стилі для контейнера таймера */
+.timer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  width: 400px; /* Фіксована ширина для обох блоків */
+  text-align: center;
+}
+
+/* Стилі для контейнера інпуту і кнопок */
+.input-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+input[type='text'] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  flex: 1;
+}
+
+button {
+  padding: 10px 20px;
+  /* margin-left: 10px; */
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button[data-start] {
+  background-color: #4caf50;
+  color: white;
+}
+
+button[data-start]:hover:not(:disabled) {
+  background-color: #45a049;
+}
+
+button[data-stop] {
+  background-color: #f44336;
+  color: white;
+}
+
+button[data-stop]:hover:not(:disabled) {
+  background-color: #e53935;
+}
+
+/* Стилі для контейнера таймера */
+.timer {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  width: 380px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Стилі для поля таймера */
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: none;
+  width: 60px; /* Фіксована ширина для кожного блоку цифр */
+}
+
+/* Стилі для значень та міток */
+.value {
+  font-size: 2rem;
+  font-weight: bold;
+  /* background-color: #282c34; */
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  text-align: center;
+}
+
+.label {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 5px;
+}
+
+/* Додаткові стилі для flatpickr */
+
+.flatpickr-day.selected,
+.flatpickr-day.startRange,
+.flatpickr-day.endRange,
+.flatpickr-day.selected:hover,
+.flatpickr-day.startRange:hover,
+.flatpickr-day.endRange:hover,
+.flatpickr-day.selected.inRange,
+.flatpickr-day.startRange.inRange,
+.flatpickr-day.endRange.inRange {
+  background: #4e75ff !important;
+  border-color: #4e75ff !important;
+  color: white;
+}
+
+.flatpickr-day.selected:hover,
+.flatpickr-day.startRange:hover,
+.flatpickr-day.endRange:hover {
+  background: #4e75ff !important;
+  border-color: #4e75ff !important;
+}
+
+.flatpickr-day.today {
+  border-color: #4e75ff !important;
+}
+
+.flatpickr-day.today:hover {
+  background: rgba(78, 117, 255, 0.1);
+  border-color: #4e75ff !important;
+  color: black;
+}
+
+.go-back-button {
+  display: inline-block;
+  padding: 5px 8px;
+  background-color: #4e75ff;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 20px;
+  width: 80px;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.form {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form input[type='number'],
+.form input[type='radio'] {
+  margin-right: 10px;
+}
+
+.form input[type='number'] {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+fieldset {
+  border: 1px solid #ddd;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+legend {
+  font-weight: bold;
+  padding: 0 10px;
+  color: #333;
+}
+
+.form button:hover {
+  background-color: #6c8cff;
+}
+
+/* Оновлені стилі */
+.form fieldset {
+  width: calc(100% - 22px); /* Однакова ширина з полями вводу */
+  display: flex;
+  justify-content: center;
+}
+
+.form fieldset label {
+  margin: 0 10px; /* Збільшуємо відстань між елементами */
+}
+
+.form button {
+  width: calc(100% - 22px); /* Однакова ширина з полями вводу */
+  width: 100%; /* Розтягуємо кнопку на всю ширину контейнера */
+  padding: 10px;
+  background-color: #4e75ff;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.form input[type='number'] {
+  width: 100%; /* Розтягуємо поле вводу на всю ширину контейнера */
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
 }
