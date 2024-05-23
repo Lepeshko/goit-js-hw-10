@@ -46,14 +46,6 @@ body {
   height: 100%;
 }
 
-/* .gallery-image {
-  display: block;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 10px; 
-} */
-
 .gallery-image {
   display: block;
   width: 100%;
@@ -226,20 +218,6 @@ div {
 .label {
   font-size: 1rem;
 }
-
-/* Загальні стилі для тіла
-body {
-  font-family: Arial, sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background-color: #f0f0f0;
-  margin: 0;
-  padding: 20px;
-  box-sizing: border-box;
-} */
 
 /* Стилі для контейнера таймера */
 .timer-container {
